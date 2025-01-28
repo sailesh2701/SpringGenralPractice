@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 	<bean id="createObj" class="com.svs.springFrameWork.CreateObj"
+		scope="prototype"> </bean>-->
+
+	<bean id="createObj" class="com.svs.springFrameWork.CreateObj">
+		<!--By default it is Singleton. If we change one thing it will change in all object references-->
+		<property name="i" value="27"></property>
+		<property name="objec" ref="sob"></property>
+	</bean>
+
+	<bean id="sob" class="com.svs.springFrameWork.SecObj">
+	</bean>
+</beans>
